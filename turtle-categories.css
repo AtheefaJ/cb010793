@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*Variable Elements*/
+:root{
+    --para-font-size: 14pt;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.8),transparent), url(./Images/background6.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*LOGO*/
+.logo img{
+    float: left;
+    width: 15rem;
+    height: auto;
+    padding-top: 5px;
+    margin-left: 2%;
+}
+
+
+/*Navigation Bar*/
+nav{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 2%;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li a{
+    border: 1px solid whitesmoke;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: beige;
+    padding: 5px 20px;
+    transition: 1s ease;
+}
+
+nav ul li a:hover{
+    background-color: rgb(114, 193, 207);
+    color: black;
+}
+
+nav ul li ul.sub-nav li{
+    display: block;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+nav ul li ul.sub-nav{
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+nav ul li:hover ul.sub-nav{
+    display: block;
+}
+
+
+/*Main Title of the page*/
+.main-title{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%,-50%);
+    color: rgb(177, 238, 246);
+    text-shadow: 5px 5px rgb(40, 54, 55);
+    font-size: 60pt;
+    text-align: center;
+}
+
+.title h1{
+    font-family: 'Mouse Memoirs';
+}
+
+
+/*Introduction*/
+.intro{
+    position: absolute;
+    padding: 2%;
+    top: 37%;
+    left: 25%;
+    right: 8%;
+    font-size: 15pt;
+    color: white;
+    text-align: justify;
+    background-color: rgba(3, 54, 63, 0.5);
+    border-radius: 2rem;
+}
+
+.intro ul li{
+    list-style-type: disc;
+    text-decoration: none;
+    list-style-position: inside;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+
+
+/*Categories of Turtles*/
+#categories-info{
+    width: 100%;
+    padding: 80px 0;
+    background-color: rgb(43, 140, 172);
+}
+
+#categories-info h2{
+    padding-left: 5%;
+    padding-bottom: 2%;
+    text-decoration-line: underline;
+}
+
+#categories-info picture{
+    padding-left: 10%;
+}
+
+#categories-info p{
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    font-size: var(--para-font-size);
+}
+
+#categories-info iframe{
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-bottom: 4%;
+}
+
+#category-5 img{
+    height: 300px;
+    width: 400px;
+}
+
+
+/*Summary Table*/
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td, .table th{
+    border: 2px solid white;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.table th{
+    background-color: rgb(23, 5, 62);
+    color: aliceblue;
+}
+
+.table tbody{
+    background-color: lightskyblue;
+}
+
+.table tfoot{
+    background-color: lightskyblue;
+}
+
+
+/*Footer of the Page*/
+footer{
+    background: rgb(6, 1, 40);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer img{
+    width: 200px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footer-content h3{
+    font-size: 25px;
+}
+
+.footer-content a{
+    text-decoration: none;
+}
+
+.footer-content a h4{
+    color: whitesmoke;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+
+/*Responsive section*/
+@media screen and (max-width: 900px){
+    .logo img{
+        float: left;
+        width: 10rem;
+        padding-top: 10px;
+    }
+
+    .nav-container{
+        display: flex;
+        align-content: end;
+        font-size: 9pt;
+        flex-wrap: wrap;
+    }
+
+    nav li{
+        margin-bottom: 7%;
+    }
+    
+    nav li a{
+        color: rgb(187, 187, 187);
+        border: none;
+        transition: 1s ease;
+        font-weight: 500;
+    }
+
+    nav ul li ul.sub-nav li{
+        padding-top: 3px;
+    }
+    
+    nav ul li ul.sub-nav{
+        margin-top: 8%;
+    }
+
+    .title{
+        position: absolute;
+        top: 34%;
+        left: 50%;
+    }
+
+    .title h1{
+        font-size: 43pt;
+    }
+
+    .intro{
+        top: 45%;
+        left: 2%;
+        right: 2%;
+        font-size: 11pt;
+        border-radius: 1rem;
+    }
+
+    #categories-info picture{
+        padding-left: 5%;
+    }
+
+    #categories-info picture img{
+        width: 20rem;
+        margin-bottom: 4%;
+        display:  flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 8%;
+    }
+
+    #categories-info iframe{
+        padding: 5%;
+        padding-bottom: 15%;
+        width: 370px;
+    }
+
+    #categories-info h2{
+        padding-bottom: 5%;
+    }
+
+    #categories-info p{
+        padding: 5%;
+        font-size: 12pt;
+    }
+
+    .table{
+        width: 100%;
+    }
+    
+    .table td, .table th{
+        padding: 0;
+        font-size: 9pt;
+    }
+
+    .footer-content a h4{
+        font-size: 20px;
+    }
+
+    .footer-content h3{
+        font-size: 25px;
+    }
+}

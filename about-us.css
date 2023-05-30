@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.4), transparent), url(./Images/back8.webp);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+
+/*logo*/
+.logo img{
+    float: left;
+    width: 15rem;
+    height: auto;
+    padding-top: 5px;
+    margin-left: 2%;
+}
+
+
+/*Navigation Bar*/
+nav{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 2%;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li a{
+    border: 1px solid whitesmoke;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    transition: 1s ease;
+}
+
+nav ul li a:hover{
+    background: white;
+    color: black;
+}
+
+nav ul li ul.sub-nav li{
+    display: block;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+nav ul li ul.sub-nav{
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+nav ul li:hover ul.sub-nav{
+    display: block;
+}
+
+
+/*Main Title*/
+.about h1{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: rgb(218, 236, 245);
+    text-shadow: 5px 5px rgba(88, 124, 124, 0.637);
+    border-bottom: 2px solid rgb(63, 86, 101);
+    font-size: 45pt;
+    text-align: center;
+}
+
+
+/*Introduction*/
+.about p{
+    position: absolute;
+    padding: 3%;
+    top: 30%;
+    left: 1%;
+    right: 45%;
+    color: rgb(179, 190, 202);
+    text-align: justify;
+    font-weight: bold;
+}
+
+.about img{
+    float: right;
+    margin-top: 8%;
+    margin-right: 10%;
+    width: 550px;
+    height: 350px;
+}
+
+
+/*Body*/
+main{
+    background-image: linear-gradient(rgba(0,0,0,0.4), transparent), url(./Images/back8.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#content{
+    padding: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 14pt;
+    color: white;
+    text-align: justify;
+}
+
+#content p{
+    padding: 3%;
+}
+
+
+/*Coral Fixed Background*/
+.coral{
+    background-image: url(./Images/coral\ reef.jpg);
+    background-size: cover;
+    height: 50vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*FOOTER*/
+footer{
+    background: rgb(8, 1, 64);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer img{
+    width: 200px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footer-content h3{
+    font-size: 25px;
+}
+
+.footer-content a{
+    text-decoration: none;
+}
+
+.footer-content a h4{
+    color: whitesmoke;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+
+/*Responsive Section*/
+@media screen and (max-width: 900px){
+    .logo a img{
+        width: 10rem;
+        padding-top: 10px;
+    }
+
+    .nav-container{
+        display: flex;
+        align-content: end;
+        font-size: 9pt;
+        flex-wrap: wrap;
+    }
+
+    nav li{
+        margin-bottom: 7%;
+    }
+    
+    nav li a{
+        color: rgb(187, 187, 187);
+        border: none;
+        transition: 1s ease;
+        font-weight: 500;
+    }
+
+    nav ul li ul.sub-nav li{
+        padding-top: 3px;
+    }
+    
+    nav ul li ul.sub-nav{
+        margin-top: 8%;
+    }
+
+    .about h1{
+        top: 57%;
+        left: 5%;
+        font-size: 30pt;
+    }
+    
+    .about p{
+        top: 66%;
+        right: 2%;
+        font-size: 11pt;
+        padding-bottom: 10%;
+    }
+    
+    .inner-section img{
+        top: 20%;
+        float: none;
+        width: 90%;
+        height: 180px;
+        margin: 4%;
+    }
+
+    #content{
+        padding: 2%;
+        margin-right: 2%;
+        margin-left: 2%;
+        font-size: 11pt;
+    }
+    
+    #content p{
+        padding: 7%;
+    }
+
+    .footer-content a h4{
+        font-size: 20px;
+    }
+
+    .footer-content h3{
+        font-size: 25px;
+    }
+}
