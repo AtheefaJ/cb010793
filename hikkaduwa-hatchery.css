@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.8),transparent), url(./Images/background5.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*LOGO*/
+.logo img{
+    float: left;
+    width: 15rem;
+    height: auto;
+    padding-top: 5px;
+    margin-left: 2%;
+}
+
+
+/*Navigation Bar*/
+nav{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 2%;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li a{
+    border: 1px solid whitesmoke;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: beige;
+    padding: 5px 20px;
+    transition: 1s ease;
+}
+
+nav ul li a:hover{
+    background-color: rgb(230, 235, 182);
+    color: black;
+}
+
+nav ul li ul.sub-nav li{
+    display: block;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+nav ul li ul.sub-nav{
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+nav ul li:hover ul.sub-nav{
+    display: block;
+}
+
+
+/*Main Title of the page*/
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(168, 157, 125);
+    text-shadow: 7px 7px rgb(74, 58, 39);
+    font-size: 45pt;
+    text-align: center;
+}
+
+.title h1{
+    font-family: 'Mouse Memoirs';
+}
+
+
+/*Body of the Page*/
+#details{
+    background-image: linear-gradient(rgba(0,0,0,0.4), transparent), url(./Images/back2.webp);
+    background-size: cover;
+    background-position: center;;
+}
+
+#details h2{
+    padding: 0.5%;
+    font-size: 25pt;
+    text-align: center;
+    color: whitesmoke;
+    background-color: rgb(65, 26, 6);
+    border: 2px solid white;
+}
+
+.photo-gal{
+    padding-left: 10%;
+}
+
+picture img{
+    padding: 1%;
+    height: 300px;
+    width: 400px;
+}
+
+.hatchery-info{
+    padding-top: 2%;
+}
+
+.hatchery-info p{
+    padding: 2%;
+    font-size: 14pt;
+    text-align: justify;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.video{
+    padding-top: 2em;
+    padding-left: 16em;
+    padding-bottom: 2em;
+}
+
+
+iframe{
+    padding: 3%;
+}
+
+
+/*FOOTER*/
+footer{
+    background: rgb(40, 17, 1);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer img{
+    width: 200px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footer-content h3{
+    font-size: 25px;
+}
+
+.footer-content a{
+    text-decoration: none;
+}
+
+.footer-content a h4{
+    color: whitesmoke;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+
+/*Responsive Section*/
+@media screen and (max-width: 900px){
+    .logo img{
+        float: left;
+        width: 10rem;
+        padding-top: 10px;
+    }
+
+    .nav-container{
+        display: flex;
+        align-content: end;
+        font-size: 9pt;
+        flex-wrap: wrap;
+    }
+
+    nav li{
+        margin-bottom: 7%;
+    }
+    
+    nav li a{
+        color: rgb(187, 187, 187);
+        border: none;
+        transition: 1s ease;
+        font-weight: 500;
+    }
+
+    nav ul li ul.sub-nav li{
+        padding-top: 3px;
+    }
+    
+    nav ul li ul.sub-nav{
+        margin-top: 8%;
+    }
+
+    .title{
+        font-size: 30pt;
+    }
+
+    .photo-gal{
+        padding: 2%;
+    }
+
+    .hatchery-info p{
+        font-size: 12pt;
+    }
+    
+    picture img{
+        width: 100%;
+        margin-bottom: 4%;
+        display:  flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .video{
+        padding: 0;
+    }
+    
+    .video iframe{
+        padding: 3%;
+        width: 100%;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    .hatchery-info p{
+        padding: 5%;
+    }
+
+    .footer-content a h4{
+        font-size: 20px;
+    }
+
+    .footer-content h3{
+        font-size: 25px;
+    }
+}

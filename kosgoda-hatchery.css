@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.4), transparent), url(./Images/background7.webp);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*LOGO*/
+.logo img{
+    float: left;
+    width: 15rem;
+    height: auto;
+    padding-top: 5px;
+    margin-left: 2%;
+}
+
+
+/*Navigation Bar*/
+nav{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 2%;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li a{
+    border: 1px solid whitesmoke;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: beige;
+    padding: 5px 20px;
+    transition: 1s ease;
+}
+
+nav ul li a:hover{
+    background-color: rgb(230, 235, 182);
+    color: black;
+}
+
+nav ul li ul.sub-nav li{
+    display: block;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+nav ul li ul.sub-nav{
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+nav ul li:hover ul.sub-nav{
+    display: block;
+}
+
+
+/*Main Title of the page*/
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(63, 41, 0);
+    text-shadow: 5px 5px rgb(172, 146, 98);
+    font-size: 45pt;
+    text-align: center;
+}
+
+.title h1{
+    font-family: 'Mouse Memoirs';
+}
+
+
+/*Title Animation*/
+.T-content{
+    animation: T-content 1s ease-out;
+}
+
+.T-content2{
+    animation: T-content2 1s ease-out;
+}
+
+
+@keyframes T-content{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes T-content2{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80%{
+        transform: translateX(-1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*End of Animation*/
+
+
+/*Body of the Web Page*/
+#body{
+    background-image: linear-gradient(rgba(0,0,0,0.4), transparent), url(./Images/back3.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#body h2{
+    padding: 1%;
+    font-size: 25pt;
+    background-color: rgba(63, 41, 0, 0.489);
+    color: beige;
+    text-align: center;   
+}
+
+.intro img{
+    margin: 1%;
+    padding-left: 3%;
+}
+
+section{
+    margin-left: 7%;
+    margin-right: 7%;
+    padding-bottom: 2%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.info{
+    font-size: 14pt;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+    color: white;   
+}
+
+picture{
+    margin-left: 4%;
+}
+
+picture img{
+    margin-top: 2%;
+    width: 350px;
+    height: 250px;
+}
+
+
+/*Footer of the Page*/
+footer{
+    background: rgb(40, 17, 1);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer img{
+    width: 200px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footer-content h3{
+    font-size: 25px;
+}
+
+.footer-content a{
+    text-decoration: none;
+}
+
+.footer-content a h4{
+    color: whitesmoke;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+/*Responsive Section*/
+@media screen and (max-width: 900px){
+    .logo img{
+        float: left;
+        width: 10rem;
+        padding-top: 10px;
+    }
+
+    .nav-container{
+        display: flex;
+        align-content: end;
+        font-size: 9pt;
+        flex-wrap: wrap;
+    }
+
+    nav li{
+        margin-bottom: 7%;
+    }
+    
+    nav li a{
+        color: rgb(58, 51, 51);
+        border: none;
+        transition: 1s ease;
+        font-weight: 600;
+        
+    }
+
+    nav ul li ul.sub-nav li{
+        padding-top: 3px;
+    }
+    
+    nav ul li ul.sub-nav{
+        margin-top: 10%;
+    }
+
+    .title{
+        font-size: 30pt;
+        top: 55%;
+    }
+
+    #body h2{
+        padding: 2%;
+        font-size: 19pt;   
+    }
+
+    .intro img{
+        margin-top: 5%;
+        width: 95%;
+        height: 200px;
+    }
+
+    .info{
+        font-size: 11pt;
+        padding: 5%;
+    }
+    
+    picture img{
+        width: 100%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-content a h4{
+        font-size: 20px;
+    }
+
+    .footer-content h3{
+        font-size: 25px;
+    }
+}

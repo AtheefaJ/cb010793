@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.4), transparent), url(./Images/background4.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*LOGO*/
+.logo img{
+    float: left;
+    width: 15rem;
+    height: auto;
+    padding-top: 5px;
+    margin-left: 2%;
+}
+
+
+/*Navigation Bar*/
+nav{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+    margin-right: 2%;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li a{
+    border: 1px solid whitesmoke;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: beige;
+    padding: 5px 20px;
+    transition: 1s ease;
+}
+
+nav ul li a:hover{
+    background-color: rgb(230, 235, 182);
+    color: black;
+}
+
+nav ul li ul.sub-nav li{
+    display: block;
+    padding-left: 25px;
+    padding-top: 20px;
+}
+
+nav ul li ul.sub-nav{
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+nav ul li:hover ul.sub-nav{
+    display: block;
+}
+
+
+/*Main Title of the page*/
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(74, 58, 39);
+    text-shadow: 6px 5px rgb(154, 140, 121);
+    font-size: 45pt;
+    text-align: center;
+}
+
+.title h1{
+    font-family: 'Mouse Memoirs';
+}
+
+
+/*Title Animations*/
+.T-content{
+    animation: T-content 2s ease-out;
+}
+
+.T-content2{
+    animation: T-content2 2s ease-out;
+}
+
+@keyframes T-content{
+    0%{
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes T-content2{
+    0%{
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*Animation End*/
+
+
+
+
+/*Body of the webpage*/
+#body{
+    background-image: linear-gradient(rgba(0,0,0,0.4), transparent), url(./Images/back4.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#body h2{
+    font-size: 25pt;
+    color: bisque;
+    background: rgba(106, 75, 14, 0.475);
+    padding: 1%;
+    text-align: center;
+}
+
+section{
+    font-size: 14pt;
+    padding-bottom: 3%;
+    text-align: justify;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.intro img{
+    float: right;
+    padding: 2%;
+}
+
+.intro p{
+    padding: 2%;
+}
+
+.objectives p{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.list{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+}
+
+picture{
+    margin-left: 3%;
+}
+
+picture img{
+    height: 400px;
+    width: 700px;
+    padding-top: 3%;
+}
+
+.img2{
+    margin-right: 2%;
+}
+
+
+/*FOOTER*/
+footer{
+    background: rgb(54, 26, 5);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer img{
+    width: 200px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footer-content h3{
+    font-size: 25px;
+}
+
+.footer-content a{
+    text-decoration: none;
+}
+
+.footer-content a h4{
+    color: whitesmoke;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+
+/*Responsive Section*/
+@media screen and (max-width: 900px){
+    .logo img{
+        float: left;
+        width: 10rem;
+        padding-top: 10px;
+    }
+
+    .nav-container{
+        display: flex;
+        align-content: end;
+        font-size: 9pt;
+        flex-wrap: wrap;
+    }
+
+    nav li{
+        margin-bottom: 7%;
+    }
+    
+    nav li a{
+        color: rgb(184, 184, 184);
+        border: none;
+        transition: 1s ease;
+        font-weight: 700;
+    }
+
+    nav ul li ul.sub-nav li{
+        padding-top: 3px;
+    }
+    
+    nav ul li ul.sub-nav{
+        margin-top: 8%;
+    }
+
+    .title{
+        font-size: 30pt;
+        top: 55%;
+    }
+
+    .intro img{
+        float: none;
+        width: 100%;
+        padding: 5%;
+    }
+
+    #body h2{
+        padding: 3%;
+        font-size: 20pt;
+    }
+
+    .intro p{
+        padding: 4%;
+        font-size: 11pt;
+    }
+    
+    .objectives p{
+        padding: 4%;
+        font-size: 11pt;
+        text-align: justify;
+    }
+    
+    .list{
+        padding: 8%;
+        font-size: 11pt;
+    }
+    
+    picture{
+        margin-left: 3%;
+    }
+    
+    picture img{
+        width: 100%;
+        height: 250px;
+        padding: 3%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .img2{
+        margin-right: 0;
+    }
+
+    .footer-content a h4{
+        font-size: 20px;
+    }
+
+    .footer-content h3{
+        font-size: 25px;
+    }
+}
