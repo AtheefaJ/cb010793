@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="./details.css" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./logo/favicon-16x16.png">
+    <link rel="manifest" href="./logo/site.webmanifest">
+    <link rel="mask-icon" href="./logo/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+
+
+</head>
+<body>
+    
+    <!--Header section of the webpage-->
+    <header>
+        <!--Logo-->
+        <div>
+        <a href="./index.html" class="logo"><img src="./Images/logo.png" alt="Logo"></a>
+        </div>
+
+        <!--Navigation Bar-->
+        <nav class="navbar">
+            <a href="./hikkaduwa-hatchery.html">Home</a>
+            <a href="#">Tickets</a>
+            <a href="#">Details</a>
+            <a href="#">Payment</a>
+            <a href="#">Confimation</a>
+        </nav>      
+    </header>
+
+    <!--Main title of the page-->
+ <div class="title">
+    <h1>Buy Tickets</h1>
+</div>
+
+<main>
+        <div id="container">
+
+            <!--Sub Title-->
+            <h2 class="sub-title">Enter your Details</h2>
+
+            <!--Details Form-->
+            <form method="get" id="detailsForm">
+                <div class="user-details">
+
+                    <!--Full Name-->
+                    <div class="input-box">
+                        <label for="fName">Full Name</label>
+                        <p>Same as on your ID</p>
+                        <input type="text" name="fName" id="fName" placeholder="Enter your full name" required>
+                        <div class="error" id="fullNameError"></div>
+                    </div>
+
+                    <!--Mobile Number-->
+                    <div class="input-box">
+                        <label for="telNo">Mobile Number</label>
+                        <p>We may reach out for booking updates here over SMS/Whatsapp</p>
+                        <input type="tel" id="telNo" name="telNo" required> 
+                        <div class="error" id="mobileError"></div>
+                    </div>
+                    
+                    <!--Email Address-->
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <p>We'll send your tickets here</p>
+                        <input type="email" name="email" id="email" placeholder="example123@example.com" required>
+                        <div class="error" id="emailError"></div>
+                    </div>
+                    
+                    <!--Confirm Email-->
+                    <div class="input-box">
+                        <label for="confirm-email">Confirm Email</label>
+                        <p>Just to ensure that we've got this right</p>
+                        <input type="email" name="confirm-email" id="confirm-email" placeholder="example123@example.com" required>
+                        <div class="error" id="confirmEmailError"></div>
+                    </div>
+
+                    <!--Gender-->
+                    <div class="input-box">
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender">
+                            <option value="Not selected">Select Your Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                <!--Continue with purchase button-->
+                <div class="button">
+                    <button type="submit" id="continue" disabled>Continue with purchase</button>
+                </div>
+            </form>
+        </div>
+
+        <!--Summary Table-->
+        <section id="container" class="summary-table">
+            <h2>Booking Summary</h2>
+            <table id="summary-table"></table>
+        </section>
+</main>
+
+<!--FOOTER-->
+<footer>
+    <div class="footer-content">
+        <a href="./index.html"><img src="./Images/logo.png" alt="Logo"></a>
+        <p>Welcome to Arribada, where you can learn about the turtle population in Sri Lanka.</p>
+        <a href="./about-us.html"><h3>About Us</h3></a>
+        <h3>Contact Us</h3>
+        <p>cb010793@students.apiit.lk</p>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2023 Arribada. designed by <span>atheefa</span></p>
+    </div>
+</footer>
+
+<script src="details.js"></script>
+</body>
+</html>

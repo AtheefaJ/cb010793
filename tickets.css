@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+:root{
+    --font: 'Roboto Condensed';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.8),transparent), url(./Images/Book-now/sea.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*Header Section*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 30px;
+    background-color: rgba(0, 0, 0, 0.364);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+/*LOGO*/
+.logo img{
+    float: left;
+    width: 15rem;
+    height: auto;
+    padding-top: 5px;
+    margin-left: 2%;
+}
+
+
+/*Navigation Bar*/
+.navbar a{
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(240, 248, 255, 0.477);
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: whitesmoke;
+    transition: .3s;
+}
+
+.navbar a:hover:before{
+    width: 100%;
+}
+
+
+/*Main Title*/
+.title{
+    position: absolute;
+    top: 10%;
+    left: 37%;
+    color: rgb(235, 221, 231);
+    text-shadow: 7px 7px rgb(82, 10, 65);
+    font-size: 45pt;
+}
+
+.title h1{
+    font-family: 'Mouse Memoirs';
+}
+
+
+/*Body of the webpage*/
+main{
+    position: relative;
+    top: 35%;
+    padding: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+section{
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 1em;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+section .sub-title{
+    font-size: 25pt;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Playfair Display';
+    padding-bottom: 5px;
+}
+
+section .sub-title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 20%;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+section h3{
+    font-family: var(--font);
+    font-size: 17pt;
+    font-weight: 600;
+    padding-top: 2%;
+}
+
+
+/* Date selection section */ 
+/* Calendar*/
+.calendar {
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: whitesmoke;
+    padding: 3%;
+    
+}
+
+/* Calendar header */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+    
+}
+
+.calendar-header h4{
+    font-size: 15pt;
+    font-family: var(--font);
+}
+
+/* Navigation buttons of the calendar */
+#prev-month, #next-month {
+    background-color: #45484a;
+    color: white;
+    border: none;
+    font-size: 14pt;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Days of the week */
+.calendarWeekdays{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    padding-left: 2%;
+}
+
+.weekday{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 30px;
+    font-family: var(--font);
+    font-size: 14pt;
+    
+}
+
+/* Calendar */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Highlighting the selected date */
+.date-cell.selected {
+    background-color: #71b7e6;
+    color: white;
+}
+
+/* Display of the selected date */
+.selected-date {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #abcee5;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Style for the selected date */
+#selected-date {
+    font-family: var(--font);
+    font-weight: 500;
+}
+
+
+/*Error message styling*/
+#date-message{
+    padding-top: 3%;
+    color: red;
+    font-family: var(--font);
+    font-size: 13pt;
+}
+
+
+
+/*Guest Selection Section*/
+.guest-selection .input-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    padding: 2%;
+    background-color: rgba(181, 185, 185, 0.16);
+    border-radius: 1em;
+}
+
+.guest-selection label{
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 14pt;
+    flex-basis: 150px;
+}
+
+.guest-selection .guests{
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    gap: 5px;
+}
+
+.guest-selection input{
+    border: none;
+    width: 45px;
+    font-family: var(--font);
+    font-size: 14pt;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.guest-selection button{
+    font-family: var(--font);
+    font-size: 14pt;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: plum;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*Duration Selection Section*/
+.duration-selection p{
+    font-family: var(--font);
+    font-size: 14pt;
+    padding: 2%;
+}
+
+.duration-selection table{
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+}
+
+.duration-selection th, .duration-selection td{
+    border: 1px solid black;
+    font-family: var(--font);
+    text-align: center;
+    padding: 1%;
+}
+
+.duration-selection th{
+    font-size: 13pt;
+    background-color: lightgray;
+}
+
+.duration-selection .input-box{
+    font-family: var(--font);
+    margin-top: 4%;
+    padding: 2%;
+    background: rgba(181, 185, 185, 0.253);
+    border-radius: 1em;
+}
+
+.duration-selection label{
+    font-weight: 600;
+    font-size: 20pt;
+    padding-left: 2%;
+}
+
+.duration-selection select[multiple]{
+    margin-top: 3%;
+    margin-left: 30%;
+    width: 50%;
+    padding-left: 2%;
+    cursor: pointer;
+    font-size: 13pt;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid grey;
+    border-bottom-width: 3px;
+    text-align: center;
+}
+
+/*Error message*/
+#duration-message{
+    padding-top: 3%;
+    color: red;
+    font-family: var(--font);
+    font-size: 13pt;
+}
+
+
+
+/*Summary Table section*/
+.summary-table h2{
+    font-size: 25pt;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Playfair Display';
+    padding-bottom: 5px;
+}
+
+.summary-table h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 40%;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+#summary-table{
+    border-collapse: collapse;
+    margin-top: 5%;
+    width: 75%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+#summary-table td, th{
+    border: 1px solid black;
+    padding: 5px;
+    font-family: var(--font);
+    font-size: 13pt;
+}
+
+#summary-table th{
+    text-align: left;
+}
+
+#summary-table .right{
+    text-align: right;
+}
+
+#summary-table .highlight{
+    background-color: lightgray;
+}
+
+
+/*Continue with purchase Button*/
+.button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+.button button{
+    font-family: var(--font);
+    font-size: 15pt;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.button button:hover{
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    cursor: pointer;
+}
+
+
+/*FOOTER*/
+footer{
+    position: relative;
+    top: 50%;
+    background: linear-gradient(-135deg, #4f7c9a, #673a78);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer img{
+    width: 200px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footer-content h3{
+    font-size: 25px;
+}
+
+.footer-content a{
+    text-decoration: none;
+}
+
+.footer-content a h3{
+    color: whitesmoke;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+
+/*Responsive Section*/
+@media screen and (max-width: 900px){
+    .logo img{
+        float: left;
+        width: 9rem;
+        padding-top: 10px;
+    }
+
+    .navbar{
+        margin-right: 15%;
+    }
+
+    .navbar a{
+        display: flex;
+        font-size: 10pt;
+        margin-bottom: 3%;
+    }
+
+    .title{
+        top: 15%;
+        left: 8%;
+        font-size: 40pt;
+        text-align: center;
+    }
+
+    main{
+        top: 40%;
+        padding: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    section{
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    section .sub-title{
+        font-size: 20pt;
+        font-weight: 600;
+    }
+    
+    section .sub-title::before{
+        width: 100%;
+    }
+
+    .calendar {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .calendar-header {
+        margin-bottom: 5%;
+    }
+
+    .calendar-header h4{
+        font-size: 13pt;
+    }
+    
+    #prev-month, #next-month {
+        font-size: 13pt;
+    }
+
+    .calendarWeekdays{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        font-weight: bold;
+    }
+
+    .weekday{
+        padding-right: 6px;
+    }
+
+    .selected-date {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .duration-selection p{
+        text-align: justify;
+    }
+
+    .duration-selection .input-box{
+        padding: 3%;
+    }
+
+    .duration-selection select[multiple]{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .duration-selection label{
+        font-size: 15pt;
+    }
+
+    .duration-selection table{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .summary-table h2{
+        font-size: 20pt;
+    }
+
+    .summary-table h2::before{
+        width: 100%;
+    }
+
+    #summary-table{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    footer{
+        top: 60%;
+    }
+
+    .footer-content a h3{
+        font-size: 20px;
+    }
+
+    .footer-content h3{
+        font-size: 25px;
+    }
+}

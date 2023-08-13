@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Playfair+Display:ital,wght@0,400;1,500&family=Roboto+Condensed:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+:root{
+    --font: 'Roboto Condensed';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.8),transparent), url(./Images/Book-now/sea.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*Header Section*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    background-color: rgba(0, 0, 0, 0.364);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+/*LOGO*/
+.logo img{
+    float: left;
+    width: 15rem;
+    height: auto;
+    padding-top: 5px;
+}
+
+
+/*Navigation Bar*/
+.navbar a{
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(240, 248, 255, 0.477);
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: whitesmoke;
+    transition: .3s;
+}
+
+.navbar a:hover:before{
+    width: 100%;
+}
+
+
+/*Main Title*/
+.title{
+    position: absolute;
+    top: 10%;
+    left: 37%;
+    color: rgb(235, 221, 231);
+    text-shadow: 7px 7px rgb(82, 10, 65);
+    font-size: 45pt;
+    letter-spacing: 5px;
+}
+
+.title h1{
+    font-family: 'Mouse Memoirs';
+    
+}
+
+/*Body of the webpage*/
+main{
+    position: relative;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 1em;
+}
+
+#container .sub-title{
+    font-size: 25pt;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Playfair Display';
+    padding-bottom: 5px;
+}
+
+#container .sub-title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 120%;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+#container form .user-details{
+    display: block;
+}
+
+form .user-details .input-box{
+    margin: 20px 0 15px 0;
+    width: 100%;
+}
+
+#telNo{
+    width: 150%;
+}
+
+.user-details .input-box label{
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 15pt;
+}
+
+.user-details .input-box p{
+    font-family: var(--font);
+    font-weight: 400;
+    color: gray;
+    font-size: 10pt;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input{
+    font-family: var(--font);
+    font-size: 12pt;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid grey;
+    padding-left: 15px;
+    border-bottom-width: 3px;
+}
+
+form .user-details .input-box select{
+    font-family: var(--font);
+    font-size: 12pt;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid grey;
+    padding-left: 15px;
+    border-bottom-width: 3px;
+    cursor: pointer;
+}
+
+form .user-details .input-box select option{
+    font-family: var(--font);
+}
+
+
+/*Error message and border styles*/
+.error-border {
+    border-color: red;
+}
+
+/* Update input border styles for valid and invalid states */
+.user-details .input-box input.error-border,
+.user-details .input-box select.error-border {
+    border-color: red;
+    border-bottom-width: 3px;
+}
+
+/* Define styles for error messages */
+.user-details .input-box .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.user-details .error-message{
+    color: red;
+    font-size: 12pt;
+    margin-top: 5px;
+}
+
+/*Styles for the "Continue with purchase" button*/
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button button{
+    font-family: var(--font);
+    font-size: 15pt;
+    font-weight: 600;
+    padding: 2%;
+    margin-left: 10%;
+    height: auto;
+    width: 100%;
+    outline: none;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button button:hover{
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    cursor: pointer;
+}
+
+
+/*Summary Table section*/
+.summary-table h2{
+    font-size: 25pt;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Playfair Display';
+    padding-bottom: 5px;
+}
+
+.summary-table h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 110%;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+#summary-table{
+    border-collapse: collapse;
+    margin-top: 5%;
+    width: 100%;
+    margin-left: 2%;
+    margin-bottom: 5%;
+}
+
+#summary-table td, th{
+    border: 1px solid black;
+    padding: 5px;
+    font-family: var(--font);
+    font-size: 13pt;
+}
+
+#summary-table th{
+    text-align: left;
+}
+
+#summary-table .right{
+    text-align: right;
+}
+
+#summary-table .highlight{
+    background-color: lightgray;
+}
+
+
+
+
+/*FOOTER*/
+footer{
+    position: relative;
+    top: 50%;
+    background: linear-gradient(-135deg, #4f7c9a, #673a78);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer img{
+    width: 200px;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.footer-content h3{
+    font-size: 25px;
+}
+
+.footer-content a{
+    text-decoration: none;
+}
+
+.footer-content a h3{
+    color: whitesmoke;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.footer-bottom{
+    background: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+
+/*Responsive Section*/
+@media screen and (max-width: 900px){
+    .logo img{
+        float: left;
+        width: 9rem;
+        padding-top: 10px;
+    }
+
+    .navbar{
+        margin-right: 15%;
+    }
+
+    .navbar a{
+        display: flex;
+        font-size: 10pt;
+        margin-bottom: 3%;
+    }
+
+    .title{
+        top: 12%;
+        left: 8%;
+        font-size: 40pt;
+        text-align: center;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 50%;
+        padding: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    #container{
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    form .button button{
+        margin-left: 0;
+    }
+
+    #container .sub-title, .summary-table h2{
+        font-size: 20pt;
+        font-weight: 600;
+    }
+    
+    #container .sub-title::before, .summary-table h2::before{
+        width: 110%;
+    }
+    
+    #container form .user-details{
+        display: block;
+    }
+    
+    form .user-details .input-box{
+        width: 100%;
+    }
+
+    #telNo{
+        width: 105%;
+    }
+
+    footer{
+        top: 60%;
+    }
+
+    .footer-content a h3{
+        font-size: 20px;
+    }
+
+    .footer-content h3{
+        font-size: 25px;
+    }
+}

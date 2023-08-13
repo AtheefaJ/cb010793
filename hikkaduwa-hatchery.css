@@ -68,6 +68,32 @@ nav ul li:hover ul.sub-nav{
     display: block;
 }
 
+/*Button for Tickets Page*/
+.tickets{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button{
+    border: 3px solid beige;
+    border-radius: 2em;
+    padding: 15px 30px;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: 1s ease;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.button:hover{
+    background-color:rgb(168, 157, 125);
+    color: black;
+    border: 3px solid black;
+    font-weight: 600;
+}
+
 
 /*Main Title of the page*/
 .title{
@@ -172,7 +198,7 @@ footer img{
     text-decoration: none;
 }
 
-.footer-content a h4{
+.footer-content a h3{
     color: whitesmoke;
     font-size: 25px;
     padding-bottom: 10px;
@@ -237,6 +263,15 @@ footer img{
         font-size: 30pt;
     }
 
+    .tickets{
+        top: 78%;
+    }
+    
+    .button{
+        padding: 10px 25px;
+        font-size: 14pt;
+    }
+
     .photo-gal{
         padding: 2%;
     }
@@ -270,7 +305,7 @@ footer img{
         padding: 5%;
     }
 
-    .footer-content a h4{
+    .footer-content a h3{
         font-size: 20px;
     }
 

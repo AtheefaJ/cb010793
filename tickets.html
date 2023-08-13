@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets</title>
+    <link rel="stylesheet" href="./tickets.css" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./logo/favicon-16x16.png">
+    <link rel="manifest" href="./logo/site.webmanifest">
+    <link rel="mask-icon" href="./logo/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+<!--Header section of the webpage-->
+    <header>
+        <!--Logo-->
+        <div>
+        <a href="./index.html" class="logo"><img src="./Images/logo.png" alt="Logo"></a>
+        </div>
+
+        <!--Navigation Bar-->
+        <nav class="navbar">
+            <a href="./hikkaduwa-hatchery.html">Home</a>
+            <a href="#">Tickets</a>
+            <a href="#">Details</a>
+            <a href="#">Payment</a>
+            <a href="#">Confimation</a>
+        </nav>      
+    </header>
+
+ <!--Main title of the page-->
+ <div class="title">
+    <h1>Buy Tickets</h1>
+</div>
+
+<!--Body of the webpage-->
+    <main>
+        <section>
+
+            <!--Sub Section - DATES-->
+            <div class="date-selection">
+                <h2 class="sub-title">Dates</h2>
+                <h3>When are you coming?</h3>
+
+                <!-- Calendar -->
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button id="prev-month">&lt;</button>
+                        <h4 id="month-year"></h4>
+                        <button id="next-month">&gt;</button>
+                    </div>
+                    <div class="calendarWeekdays">
+                        <div class="weekday">Sun</div>
+                        <div class="weekday">Mon</div>
+                        <div class="weekday">Tue</div>
+                        <div class="weekday">Wed</div>
+                        <div class="weekday">Thu</div>
+                        <div class="weekday">Fri</div>
+                        <div class="weekday">Sat</div>
+                    </div>
+                    
+                    <div class="calendar-grid" id="calendar-grid"></div>
+                </div>
+                
+                <!-- Displaying the selected Date -->
+                <div class="selected-date">
+                    <h3>Selected Date</h3>
+                    <p id="selected-date"></p>
+                </div>
+
+                <!--Section to display an error message if the user clicks on a date before the current date-->
+                <div id="date-message"></div>
+            
+            </div>
+        </section>
+
+
+        <section>
+            <!--Sub Section - GUESTS-->
+            <div class="guest-selection">
+                <h2 class="sub-title">Guests</h2>
+
+                <!--SL Adult-->
+                <div class="input-box">
+                    <label for="slAdult">SL Adult</label>
+                    <div class="guests">
+                        <button class="deduct">-</button>
+                        <input type="number" name="SL Adult" id="slAdult" min="0">
+                        <button class="add">+</button>
+                    </div>
+                </div>
+
+                <!--SL Child-->
+                <div class="input-box">
+                    <label for="slChild">SL Child</label>
+                    <div class="guests">
+                        <button class="deduct">-</button>
+                        <input type="number" name="SL Child" id="slChild" min="0">
+                        <button class="add">+</button>
+                    </div>
+                </div>
+
+                <!--Foreigner Adult-->
+                <div class="input-box">
+                    <label for="fAdult">Foreigner Adult</label>
+                    <div class="guests">
+                        <button class="deduct">-</button>
+                        <input type="number" name="Foreigner Adult" id="fAdult" min="0">
+                        <button class="add">+</button>
+                    </div>
+                </div>
+
+                <!--Foreigner Child-->
+                <div class="input-box">
+                    <label for="fChild">Foreigner Child</label>
+                    <div class="guests">
+                        <button class="deduct">-</button>
+                        <input type="number" name="Foreigner Child" id="fChild" min="0">
+                        <button class="add">+</button>
+                    </div>
+                </div>
+
+                <!--Infant-->
+                <div class="input-box">
+                    <label for="infant">Infant</label>
+                    <div class="guests">
+                        <button class="deduct">-</button>
+                        <input type="number" name="Infant" id="infant" min="0">
+                        <button class="add">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+
+        <section>
+            <!--Sub Section - DURATION-->
+            <div class="duration-selection">
+                <h2 class="sub-title">Duration</h2>
+
+                <h3>Plan your hatchery visit time!</h3>
+                <p>Here's how the charges are being calculated,</p>
+
+                <!--Table to display the ticket charges per hour for each type of guest-->
+                <table class="charge-table">
+                    <tr>
+                        <th>Type of Guest</th>
+                        <th>Charge per one <em>Normal</em> hour</th>
+                        <th>Charge per one <em>Peak</em> hour</th>
+                    </tr>
+                    <tr>
+                        <td>Foreigner Adult</td>
+                        <td>$10.00</td>
+                        <td>$13.00</td>
+                    </tr>
+                    <tr>
+                        <td>Foreigner Child</td>
+                        <td>$5.00</td>
+                        <td>$8.00</td>
+                    </tr>
+                    <tr>
+                        <td>SL Adult</td>
+                        <td>$4.00</td>
+                        <td>$6.00</td>
+                    </tr>
+                    <tr>
+                        <td>SL Child</td>
+                        <td>$2.00</td>
+                        <td>$3.00</td>
+                    </tr>
+                </table>
+
+                <p><strong>Important Note: </strong> Everyday from <em>10.00 am to 01.00 pm</em> and from <em>03.00 pm to 06.00 pm</em> is considered as <strong>Peak Hours</strong></p>
+
+                <!--Duration selection values-->
+                <div class="input-box">
+                    <label for="duration">Pick your preferred time slots: </label>
+                    <select name="duration" id="duration" multiple>
+                        <option value="07:00-08:00">07.00 am - 08.00 am</option>
+                        <option value="08:00-09:00">08.00 am - 09.00 am</option>
+                        <option value="09:00-10:00">09.00 am - 10.00 am</option>
+                        <option value="10:00-11:00">10.00 am - 11.00 am (Peak) </option>
+                        <option value="11:00-12:00">12.00 am - 12.00 pm (Peak)</option>
+                        <option value="12:00-13:00">12.00 pm - 01.00 pm (Peak)</option>
+                        <option value="13:00-14:00">01.00 pm - 02.00 pm</option>
+                        <option value="14:00-15:00">02.00 pm - 03.00 pm</option>
+                        <option value="15:00-16:00">03.00 pm - 04.00 pm (Peak)</option>
+                        <option value="16:00-17:00">04.00 pm - 05.00 pm (Peak)</option>
+                        <option value="17:00-18:00">05.00 pm - 06.00 pm (Peak)</option>
+                    </select>
+
+                    <!--Section to display an error message if the user clicks on non consecutive time slots-->
+                    <div id="duration-message"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--Summary Table section-->
+        <section class="summary-table">
+            <h2>Booking Summary</h2>
+            <table id="summary-table">
+                
+            </table>
+        </section>
+
+
+
+        <section>
+            <!--Continue with purchase button-->
+            <div class="button">
+                <button type="submit" id="continue-button">Continue with purchase</button>
+            </div>
+        </section>
+    </main>
+
+
+<!--FOOTER-->
+<footer>
+    <div class="footer-content">
+        <a href="./index.html"><img src="./Images/logo.png" alt="Logo"></a>
+        <p>Welcome to Arribada, where you can learn about the turtle population in Sri Lanka.</p>
+        <a href="./about-us.html"><h3>About Us</h3></a>
+        <h3>Contact Us</h3>
+        <p>cb010793@students.apiit.lk</p>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2023 Arribada. designed by <span>atheefa</span></p>
+    </div>
+</footer>
+
+<script src="./tickets.js"></script>
+</body>
+</html>
